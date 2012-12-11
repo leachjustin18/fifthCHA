@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Untitled</title>
+        <link rel="stylesheet" type="text/css" href="media/main.css"/>
+        <script type="text/javascript" src="media/jquery-1.8.min.js"></script>
+        <script type="text/javascript" charset="utf-8">
+         $(function() {
+    var answerAValue, answer;
+    var $sel = {
+      checkbox: $('input:checkbox'),
+      submit: $('.submitA'),
+      pSelect: $('.pleaseSelect'),
+      correct: $('.correctA'),
+      incorrect: $('.IncorrectA')
+    }
+    $sel.submit.click(function() {
+      if($sel.checkbox.is(':checked') === false) {
+        $sel.incorrect.addClass('hidden');
+        $sel.correct.addClass('hidden')
+        $sel.pSelect.removeClass('hidden');
+      }
+        else if(($("input.rbA").is(':checked') === true) && ($("input.rbB").is(':checked') === true) && ($("input.rbC").is(':checked') === false) && ($("input.rbD").is(':checked') === true) && ($("input.rbE").is(':checked') === false) && ($("input.rbF").is(':checked') === true) && ($("input.rbG").is(':checked') === true)) {
+          $sel.correct.removeClass('hidden');
+          $sel.pSelect.addClass('hidden');
+          $sel.incorrect.addClass('hidden');
+          $sel.submit.addClass('hidden');
+        } else {
+          $sel.incorrect.removeClass('hidden');
+          $sel.pSelect.addClass('hidden');
+          $sel.submit.addClass('hidden');
+        }
+      });
+    });
+        </script>
+    </head>
+    <body>
+        <div id="wrapper">
+        <div id="textSection"> 
+      A goal of family–centered care is to support the development of parenting skills. A first step in addressing this goal is to identify those parents who are most in need of intervention and education.
+<div class="instructions">Select the characteristics which you feel are predictors of poor parenting outcomes.</div>
+        
+        <div id="test">
+        	<label>
+      <input type="checkbox" class="radioBtn rbA" name="q1" value="a" />Low level of anxiety</label><br />
+
+    <label>
+      <input type="checkbox" class="radioBtn rbB radH" name="q1" value="b" />Does not ask questions or seek information</label><br />
+
+    <label>
+      <input type="checkbox" class="radioBtn rbC" name="q1" value="c" />Positive self-esteem</label><br />
+
+    <label>
+      <input type="checkbox" class="radioBtn rbD" name="q1" value="d" />Overly optimistic</label><br />
+
+      <label>
+      <input type="checkbox" class="radioBtn rbE" name="q1" value="e" />Interacts in a caring and loving fashion</label><br />
+
+      <label>
+      <input type="checkbox" class="radioBtn rbF" name="q1" value="f" />Unwanted Pregancy</label><br />
+
+      <label>
+      <input type="checkbox" class="radioBtn rbG" name="q1" value="g" />Lacks a support system</label><br />
+
+        </div>
+
+        <input type="submit" value="Check Answers" class="submitA" />
+
+        </div>
+
+        <div id ="rightImage"></div>
+
+        <div class="correctA hidden answers">
+  			<div class="sectionTitle">Correct!</div>
+		  Predicators of poor parenting outcomes include a low level of anxiety, not asking questions or seeking information, being overly optimistic, an unwanted pregnancy and lacking a support system.
+  		</div>
+  		
+  		<div class="IncorrectA hidden answers"> 
+  			<div class="sectionTitle">Incorrect.</div>
+			Predicators of poor parenting outcomes include a low level of anxiety, not asking questions or seeking information, being overly optimistic, an unwanted pregnancy and lacking a support system.
+  		</div>
+  		
+  		<div class="pleaseSelect hidden answers"> 	
+  			<div class="sectionTitle">Sorry!</div>
+			Please choose your answer(s) before checking.
+  		</div>
+        </div>
+    </body>
+</html>   	
+     

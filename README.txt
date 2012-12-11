@@ -1,0 +1,1 @@
+Created a test using checkboxes.  Test the ones that are checked and the ones that are not. After you check your answers it will show that if you are right or not.
